@@ -1,0 +1,97 @@
+<div class="pageContainer">
+    <div class="tableContainer">
+           <div class="header">
+        <h3>Lista de Propostas</h3>
+        <div class="exportar">
+                  <mat-accordion>
+            <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title> Exportar Propostas</mat-panel-title>
+              </mat-expansion-panel-header>
+              <div class="options">
+                              <button (click)="exportAsCSV()">Exportar CSV</button>
+              <button (click)="exportAsXLSX()">Exportar XLSX</button>
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+        </div>
+  
+
+      <div class="tableWrap">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- ID da Proposta Column -->
+        <ng-container matColumnDef="ID da Proposta">
+          <th mat-header-cell *matHeaderCellDef> ID da Proposta </th>
+          <td mat-cell *matCellDef="let element"> {{element["ID da Proposta"]}} </td>
+        </ng-container>
+      
+        <!-- Nome/Razão Social do Cliente Column -->
+        <ng-container matColumnDef="Nome/Razão Social do Cliente">
+          <th mat-header-cell *matHeaderCellDef> Nome/Razão Social do Cliente </th>
+          <td mat-cell *matCellDef="let element"> {{element["Nome/Razão Social do Cliente"]}} </td>
+        </ng-container>
+      
+        <!-- CPF/CNPJ do Cliente Column -->
+        <ng-container matColumnDef="CPF/CNPJ do Cliente">
+          <th mat-header-cell *matHeaderCellDef> CPF/CNPJ do Cliente </th>
+          <td mat-cell *matCellDef="let element"> {{element["CPF/CNPJ do Cliente"]}} </td>
+        </ng-container>
+      
+        <!-- Produto Column -->
+        <ng-container matColumnDef="Produto">
+          <th mat-header-cell *matHeaderCellDef> Produto </th>
+          <td mat-cell *matCellDef="let element"> {{element["Produto"]}} </td>
+        </ng-container>
+      
+        <!-- Valor da Proposta Column -->
+        <ng-container matColumnDef="Valor da Proposta">
+          <th mat-header-cell *matHeaderCellDef> Valor da Proposta </th>
+          <td mat-cell *matCellDef="let element"> {{element["Valor da Proposta"]}} </td>
+        </ng-container>
+      
+        <!-- Status da Proposta Column -->
+        <ng-container matColumnDef="Status da Proposta">
+          <th mat-header-cell *matHeaderCellDef> Status da Proposta </th>
+          <td mat-cell *matCellDef="let element"> {{element["Status da Proposta"]}} </td>
+        </ng-container>
+      
+        <!-- Sub-Status da Proposta (funil da mesa) Column -->
+        <ng-container matColumnDef="Sub-Status da Proposta (funil da mesa)">
+          <th mat-header-cell *matHeaderCellDef> Sub-Status da Proposta (funil da mesa) </th>
+          <td mat-cell *matCellDef="let element"> {{element["Sub-Status da Proposta (funil da mesa)"]}} </td>
+        </ng-container>
+      
+        <!-- SLA Column -->
+        <ng-container matColumnDef="SLA">
+          <th mat-header-cell *matHeaderCellDef> SLA </th>
+          <td mat-cell *matCellDef="let element"> {{element["SLA"]}} </td>
+        </ng-container>
+      
+        <!-- Analista Responsável Column -->
+        <ng-container matColumnDef="Analista Responsável">
+          <th mat-header-cell *matHeaderCellDef> Analista Responsável </th>
+          <td mat-cell *matCellDef="let element"> {{element["Analista Responsável"]}} </td>
+        </ng-container>
+      
+        <!-- Data Criação Column -->
+        <ng-container matColumnDef="Data Criação">
+          <th mat-header-cell *matHeaderCellDef> Data Criação </th>
+          <td mat-cell *matCellDef="let element"> {{element["Data Criação"]}} </td>
+        </ng-container>
+      
+        <!-- Criada Por (responsável) Column -->
+        <ng-container matColumnDef="Criada Por (responsável)">
+          <th mat-header-cell *matHeaderCellDef> Criada Por (responsável) </th>
+          <td mat-cell *matCellDef="let element"> {{element["Criada Por (responsável)"]}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table> 
+      </div>
+
+    </div>
+
+      
+</div>

@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: propostas-app
+    ports:
+      - "4200:4200"
+    networks:
+      - propostas-app
+
+networks:
+  propostas-app:
