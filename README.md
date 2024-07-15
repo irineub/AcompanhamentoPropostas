@@ -1,4 +1,4 @@
-# AcompanhamentoPropostas
+# Tabela de acompanhamento de propostas - Angular
 1. Passo - Clonar o Repositorio:
     - git clone https://github.com/irineub/AcompanhamentoPropostas.git
 2. Passo- Entrar na pasta que foi clonada:
