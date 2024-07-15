@@ -1,6 +1,9 @@
 # AcompanhamentoPropostas
-
-  ## Para rodar basta ter o docker instalado e rodar o comando no terminal na pasta raiz da aplicação:
+  ## 1 Passo - Clonar o Repositorio:
+     git clone https://github.com/irineub/AcompanhamentoPropostas.git
+  ## 2 Passo- Entrar na pasta que foi clonada:
+     cd AcompanhamentoPropostas
+  ## 3 Passo- Ter o docker instalado e rodar o comando no terminal na pasta raiz da aplicação:
      docker compose up --build 
      
 
